@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel's Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* General Styles */
         body {
@@ -15,14 +16,33 @@
             color: #333;
         }
 
+        /* Navigation Bar */
+        nav {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         /* Header Section */
         header {
             background-color: #007BFF;
-            color: #fff;
+            color: white;
             padding: 20px 0;
             text-align: center;
         }
-
         header h2 {
             margin: 0;
             font-size: 2rem;
@@ -38,22 +58,18 @@
             text-align: center;
             margin: 20px 0;
         }
-
         .resume-links ol {
             list-style-type: none;
             padding: 0;
         }
-
         .resume-links li {
             margin: 10px 0;
         }
-
         .resume-links a {
             text-decoration: none;
             color: #007BFF;
             font-weight: bold;
         }
-
         .resume-links a:hover {
             text-decoration: underline;
         }
@@ -61,45 +77,112 @@
         /* Useful Links Section */
         .useful-links {
             margin: 40px 0;
-            background-color: #fff;
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             margin-left: auto;
             margin-right: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        .useful-links:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
         .useful-links h3 {
             text-align: center;
             color: #007BFF;
             margin-bottom: 20px;
         }
-
         .useful-links ul {
             list-style-type: none;
             padding: 0;
         }
-
         .useful-links li {
             margin: 10px 0;
         }
-
         .useful-links a {
             text-decoration: none;
             color: #333;
             font-weight: bold;
         }
-
         .useful-links a:hover {
             color: #007BFF;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            margin: 40px 20px;
+        }
+        .skills-section h3 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .skill {
+            margin: 10px 0;
+        }
+        .skill label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .skill-bar {
+            background: #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .skill-bar div {
+            background: #007BFF;
+            color: white;
+            padding: 5px 10px;
+            text-align: right;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #f4f4f9;
+        }
+        .dark-mode a {
+            color: #4dabf7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .useful-links ul {
+                padding-left: 20px;
+            }
+            .resume-links ol {
+                padding-left: 20px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#resume">Resume</a>
+        <a href="#useful-links">Useful Links</a>
+        <a href="#skills">Skills</a>
+    </nav>
+
     <!-- Header Section -->
-    <header>
+    <header id="resume">
         <h2>Daniel's Resume</h2>
     </header>
 
@@ -122,17 +205,51 @@
     </div>
 
     <!-- Useful Links Section -->
-    <div class="useful-links">
+    <div class="useful-links" id="useful-links">
         <h3>Useful Links</h3>
         <ul>
-            <li><a href="https://github.com/DanielMakokha" target="_blank">GitHub</a></li>
-            <li><a href="https://danielmakokha.netlify.app/" target="_blank">Portfolio</a></li>
-            <li><a href="https://x.com/anonymode1" target="_blank">Twitter</a></li>
-            <li><a href="https://www.instagram.com/anonymode1/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com/@anonymode" target="_blank">YouTube</a></li>
-            <li><a href="https://www.linkedin.com/in/daniel-makokha-38709020b/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/DanielMakokha" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            <li><a href="https://danielmakokha.netlify.app/" target="_blank"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+            <li><a href="https://x.com/anonymode1" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://www.instagram.com/anonymode1/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://www.youtube.com/@anonymode" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+            <li><a href="https://www.linkedin.com/in/daniel-makokha-38709020b/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
         </ul>
     </div>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <h3>My Skills</h3>
+        <div class="skill">
+            <label>Cybersecurity</label>
+            <div class="skill-bar">
+                <div style="width: 90%;">90%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <label>Web Development</label>
+            <div class="skill-bar">
+                <div style="width: 80%;">80%</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Daniel Makokha. All Rights Reserved.</p>
+        <p>Contact: <a href="mailto:danielmakokhan@gmail.com">danielmakokhan@gmail.com</a></p>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" style="position: fixed; bottom: 20px; right: 20px; background: #007BFF; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px;">
+        Toggle Dark Mode
+    </button>
+    <script>
+        const toggle = document.getElementById('darkModeToggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 
 </body>
 </html>
