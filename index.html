@@ -5,51 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel's Resume</title>
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
             line-height: 1.6;
-        }
-        h2, h3 {
-            text-align: center;
+            background-color: #f4f4f9;
             color: #333;
         }
+
+        /* Header Section */
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
         hr {
             border: 1px solid #ccc;
+            margin: 20px 0;
         }
-        ol, ul {
+
+        /* Resume Links Section */
+        .resume-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .resume-links ol {
             list-style-type: none;
             padding: 0;
         }
-        li {
+
+        .resume-links li {
             margin: 10px 0;
         }
-        a {
+
+        .resume-links a {
             text-decoration: none;
             color: #007BFF;
+            font-weight: bold;
         }
-        a:hover {
+
+        .resume-links a:hover {
             text-decoration: underline;
         }
-        .centered-section {
-            text-align: center;
-        }
+
+        /* Useful Links Section */
         .useful-links {
-            margin-top: 30px;
-        }
-        .useful-links ul {
-            text-align: left;
+            margin: 40px 0;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 400px;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .useful-links h3 {
+            text-align: center;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .useful-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .useful-links li {
+            margin: 10px 0;
+        }
+
+        .useful-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .useful-links a:hover {
+            color: #007BFF;
         }
     </style>
 </head>
 <body>
 
-    <h2>Daniel's Resume</h2>
+    <!-- Header Section -->
+    <header>
+        <h2>Daniel's Resume</h2>
+    </header>
+
     <hr/>
 
-    <div class="centered-section">
+    <!-- Resume Links Section -->
+    <div class="resume-links">
         <ol>
             <li>
                 <a href="Daniel_Resume.pdf" download="Daniel_Resume.pdf" target="_blank">
@@ -64,8 +121,9 @@
         </ol>
     </div>
 
-    <h3>Useful Links</h3>
+    <!-- Useful Links Section -->
     <div class="useful-links">
+        <h3>Useful Links</h3>
         <ul>
             <li><a href="https://github.com/DanielMakokha" target="_blank">GitHub</a></li>
             <li><a href="https://danielmakokha.netlify.app/" target="_blank">Portfolio</a></li>
